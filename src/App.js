@@ -1,27 +1,17 @@
 import "./App.css";
+import { NavLink } from "react-router-dom";
+import NavMain from "./components/NavMain";
+import React from "react";
 
 function App() {
   return (
-    <div className="App">
-      <nav className="App-header">
-        <p>
-          <a className="App-link" href="/">
-            Home
-          </a>
-        </p>
-
-        <p>
-          <a className="App-link" href="/temperatures">
-            Temperatures
-          </a>
-        </p>
-
-        <p>
-          <a className="App-link" href="/customize-image">
-            Customize image
-          </a>
-        </p>
-      </nav>
+    <div>
+      <NavMain />
+      <nav>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/temperatures">Temperature</NavLink>
+      <NavLink to="/customizeimages">Customize images</NavLink>
+    </nav>
     </div>
   );
 }
